@@ -1,20 +1,103 @@
-:root{
-    --primary-color: #283E51;
-    --accent-color: #17AC9D;
+:root {
+  --primary-color: #283e51;
+  --accent-color: #17ac9d;
 }
 
 @font-face {
-    font-family: "Rockness-Regular";
-    src: url("fonts/Rockness.woff");
+  font-family: "Rockness-Regular";
+  src: url("fonts/Rockness.woff");
 }
 
 @font-face {
-    font-family: "Gilroy-Bold";
-    src: url("fonts/Gilroy-Bold.woff");
+  font-family: "Gilroy-Bold";
+  src: url("fonts/Gilroy-Light.woff");
+}
+
+@font-face {
+  font-family: "Butler-Light";
+  src: url("fonts/Butler_Light.woff");
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.header {
+  margin: 55px 10% 150px 8%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gilroy-Bold", sans-serif;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.nav-bar {
+  width: 60%;
+  display: flex;
+}
+
+.nav-pages {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-pages__name {
+  padding: 0 5px 15px 5px;
+}
+
+.nav-pages__name:hover {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.nav-lg {
+  padding: 18px;
+  margin-left: 7%;
+  border: 1px solid var(--primary-color);
+}
+
+.main {
+  margin: 0 10%;
+  /* width: 100%; */
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.hero-section-header-1 {
+  margin: 0;
+  font-size: 100px;
+  color: var(--primary-color);
+  font-family: "Butler-Light";
+}
+
+.hero-section-header-2 {
+  margin-top: 50px;
+  font-size: 100px;
+  color: var(--accent-color);
+  font-family: "Rockness-Regular", sans-serif;
+}
+
+.hero-section-p {
+  font-size: 35px;
+  color: var(--primary-color);
+  font-family: "Butler-Light";
 }
 
 /*  Statistics ring  */
-.statistics-ring{
+/* .statistics-ring{
     width: 323px;
     aspect-ratio: 1;
     background-image: url("images/Ellipse27.svg");
@@ -23,9 +106,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} */
 
-.statistics-ring::before{
+/* .statistics-ring::before{
     content: '';
     aspect-ratio: 1;
     border: 1px solid var(--accent-color);
@@ -42,9 +125,9 @@
     font-family: "Rockness-Regular", sans-serif;
     font-size: 102px;
     line-height: 85px;
-}
+} */
 
-.statistics-ring__indicator{
+/* .statistics-ring__indicator{
     color: var(--primary-color);
     font-family: "Gilroy-Bold", sans-serif;
     font-size: 24px;
@@ -54,4 +137,4 @@
     left: 80%;
 
 }
-/*  -- Statistics ring -- */
+ -- Statistics ring -- */
