@@ -1,0 +1,57 @@
+:root{
+    --primary-color: #283E51;
+    --accent-color: #17AC9D;
+}
+
+@font-face {
+    font-family: "Rockness-Regular";
+    src: url("fonts/Rockness.woff");
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("fonts/Gilroy-Bold.woff");
+}
+
+/*  Statistics ring  */
+.statistics-ring{
+    width: 323px;
+    aspect-ratio: 1;
+    background-image: url("images/Ellipse27.svg");
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.statistics-ring::before{
+    content: '';
+    aspect-ratio: 1;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.statistics-ring__number{
+    color: var(--primary-color);
+    font-family: "Rockness-Regular", sans-serif;
+    font-size: 102px;
+    line-height: 85px;
+}
+
+.statistics-ring__indicator{
+    color: var(--primary-color);
+    font-family: "Gilroy-Bold", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    position: absolute;
+    bottom: 18%;
+    left: 80%;
+
+}
+/*  -- Statistics ring -- */
