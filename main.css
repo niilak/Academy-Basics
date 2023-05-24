@@ -2,6 +2,8 @@
   --primary-color: #283e51;
   --accent-color: #17ac9d;
   --gray-color: #f5f5f5;
+  font-size: 16px;
+  color: var(--primary-color);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@800&display=swap");
@@ -20,6 +22,11 @@
 @font-face {
   font-family: "Gilroy-Light";
   src: url("fonts/Gilroy-Light.woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("fonts/Gilroy-Medium.woff");
 }
 
 @font-face {
@@ -55,20 +62,24 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   margin: 55px 10% 150px 8%;
 }
 
 .logo {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Gilroy-Bold", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
   color: var(--primary-color);
   font-size: 20px;
 }
@@ -79,58 +90,68 @@ body {
   justify-content: space-between;
 }
 
-.nav__pages {
+.nav__links {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 1;
 }
 
-.nav-pages__name {
+.nav__link {
+  color: var(--primary-color);
   padding: 0 5px 15px 5px;
 }
 
-.nav-pages__name:hover {
+.nav__link:hover {
+  /*ovo bi trebalo da  je modifier, ali nisam sigurna da li je potrebno imenovati i praviti novu klasu*/
   border-bottom: 3px solid var(--primary-color);
 }
 
-.nav__lg {
-  padding: 18px;
+.nav-lng__btn {
+  color: var(--primary-color);
+  padding: 1.2rem;
   margin-left: 7%;
   border: 1px solid var(--primary-color);
 }
 
-/* .main {
-  width: 100%;
-} */
-
 .hero__section {
+  position: relative;
   margin: 0 17%;
   text-align: center;
+  z-index: 1;
+}
+
+.hero__section::after {
+  position: absolute;
+  z-index: -1;
+  top: 12rem;
+  left: -26rem;
+  content: url(images/team_shape_one.png);
 }
 
 .hero__header1 {
   margin: 0;
-  font-size: 100px;
+  font-size: 6.25rem;
   color: var(--primary-color);
   font-family: "Butler-Light";
 }
 
 .hero__header2 {
-  margin-top: 50px;
-  font-size: 100px;
+  margin-top: 3rem;
+  font-size: 6.25rem;
   color: var(--accent-color);
   font-family: "Rockness-Regular", sans-serif;
 }
 
-.hero__p {
-  font-size: 35px;
+.hero__description {
+  font-size: 2rem;
   color: var(--primary-color);
   font-family: "Butler-Light";
 }
 
 .box {
-  margin-top: 92px;
+  margin-top: 5.75rem;
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
@@ -144,7 +165,7 @@ body {
   text-align: center;
 }
 
-.box__paragraph {
+.box__description {
   font-size: 20px;
   font-family: "Gilroy-Light", sans-serif;
   color: var(--primary-color);
@@ -235,10 +256,29 @@ body {
   margin-bottom: 30pxs;
 }
 
+.clients__row {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50% 50%;
+}
+
 .scroll {
+  position: relative;
   width: 50%;
   border-bottom: 2px solid var(--primary-color);
   margin: auto;
+}
+
+.scroll::before {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  content: "";
+  width: 220px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
 }
 
 footer {
@@ -247,29 +287,30 @@ footer {
   color: var(--gray-color);
 }
 
-.footer_intro__p {
+.footer__intro {
   margin-top: 50px;
   margin-bottom: 40px;
   font-size: 26px;
 }
 
-.footer_div {
+.footer__div {
   display: flex;
   /* margin: auto; */
   flex-direction: column;
   align-items: center;
 }
 
-.contact_us {
+.contact__form {
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 }
 
-.contact_us p {
+.contact__form p {
   font-family: "Grilroy-Semibold";
   font-size: 45px;
 }
-.contact_us::before {
+
+.contact__form::before {
   position: absolute;
   top: 50%;
   right: 50%;
@@ -281,10 +322,23 @@ footer {
   z-index: 0;
 }
 
+.our__location {
+  display: flex;
+  padding: 75px 0;
+  width: 60%;
+  background-image: url(images/footer-worldmap.png);
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .white__box {
   position: relative;
   display: flex;
   align-items: center;
+  width: fit-content;
+  margin: auto;
+  font-size: 1.5rem;
   margin-bottom: 50px;
   padding: 10px;
   border-radius: 5px;
@@ -311,12 +365,51 @@ footer {
   margin-left: 10px;
 }
 
+.point {
+  width: 15px;
+  height: 15px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  margin-bottom: 155px;
+  border: 3px #ac17174a solid;
+}
+
+.social__media {
+  margin-bottom: 100px;
+}
+
+.social__media p {
+  margin-bottom: 20px;
+}
+
 /* Reusable classes */
 
-.fontbutlerLight {
+.text-gray {
+  color: var(--gray-color);
+}
+
+.font-butlerLight {
   font-family: "Butler-Light";
 }
 
 .text-center {
   text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.down-line {
+  border-bottom: 1px solid var(--gray-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
