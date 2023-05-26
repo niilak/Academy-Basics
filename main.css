@@ -60,6 +60,7 @@ body {
   margin: 0;
   width: 100%;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -67,7 +68,12 @@ a {
 }
 
 .header {
-  margin: 55px 10% 150px 8%;
+  /* margin: 55px 10% 150px 8%; */
+  /* da li za margine ove da pravim container koji cu da dodajem ili\?? */
+  margin-top: 3.4rem;
+  margin-left: 9.3rem;
+  margin-right: 9.3rem;
+  margin-bottom: 9.5rem;
 }
 
 .logo {
@@ -81,7 +87,7 @@ a {
   align-items: center;
   font-family: "Gilroy-Medium", sans-serif;
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .nav__bar {
@@ -106,12 +112,15 @@ a {
 .nav__link:hover {
   /*ovo bi trebalo da  je modifier, ali nisam sigurna da li je potrebno imenovati i praviti novu klasu*/
   border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 12px;
 }
 
 .nav-lng__btn {
   color: var(--primary-color);
-  padding: 1.2rem;
-  margin-left: 7%;
+  width: 45px;
+  height: 38px;
+  text-align: center;
+  margin-left: 8rem;
   border: 1px solid var(--primary-color);
 }
 
@@ -150,15 +159,29 @@ a {
   font-family: "Butler-Light";
 }
 
+main {
+  overflow: hidden;
+}
+
 .box {
+  position: relative;
+  z-index: 1;
   margin-top: 5.75rem;
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
-  padding: 80px 6% 185px 6%;
+  padding: 3.5rem 6.2rem 11.5rem 6.2rem;
   border-radius: 24px;
   box-shadow: 0px 0px 50px #67859e26;
   /* margin-bottom: 250px; */
+}
+
+.box::after {
+  position: absolute;
+  content: url(images/triangle-shape.png);
+  z-index: -1;
+  top: 28rem;
+  right: -29rem;
 }
 
 .box__img {
@@ -166,7 +189,7 @@ a {
 }
 
 .box__description {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Gilroy-Light", sans-serif;
   color: var(--primary-color);
   opacity: 0.8;
@@ -174,29 +197,33 @@ a {
 }
 
 .info {
-  display: flex;
-  justify-content: space-between;
-  margin: -135px 10% 100px 10%;
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: auto auto auto;
+  column-gap: 3.2rem;
+  justify-content: center;
+  /* margin: -135px 10% 100px 10%; */
+  margin: -8.5rem auto 6rem auto;
 }
 
 .info__box {
   background-color: var(--gray-color);
-  width: 405px;
+  width: 25rem;
 }
 
 .info__header {
   text-align: center;
   font-family: "Butler-Light";
   color: var(--accent-color);
-  font-size: 40px;
-  margin-top: 70px;
+  font-size: 2.5rem;
+  margin-top: 4.3rem;
 }
 
 .info__p {
   text-align: center;
   font-family: "Gilroy-Light";
   font-size: 23px;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 }
 
 .banner {
@@ -204,24 +231,10 @@ a {
   display: flex;
 }
 
-.banner__vision,
-.banner__objectives,
-.banner__mission {
+.banner__container {
+  padding: 6.25rem 9.5rem 5rem 9.5rem;
   width: 33.33%;
-  padding: 100px 0 80px 0;
   text-align: center;
-}
-
-.banner__vision {
-  background-color: var(--primary-color);
-}
-
-.banner__objectives {
-  background-color: var(--accent-color);
-}
-
-.banner__mission {
-  background-color: var(--gray-color);
 }
 
 .banner__mission.banner__header {
@@ -231,35 +244,35 @@ a {
 .banner__header {
   font-family: "Rockness-Regular";
   font-weight: normal;
-  font-size: 94px;
+  font-size: 5.8rem;
 }
 
 .banner__p {
   font-family: "Gilroy-Light";
   font-weight: normal;
-  font-size: 20px;
-  margin: auto;
-  width: 50%;
+  font-size: 1.25rem;
+  /* margin: auto 4rem; */
 }
 
 .clients {
-  margin: 100px 20%;
+  margin: 6.25rem 20%;
 }
 
 .clients__header {
   font-weight: normal;
-  font-size: 72px;
+  font-size: 4.5rem;
 }
 
 .clients__p {
   font-size: 22px;
-  margin-bottom: 30pxs;
+  margin-bottom: 1.85rem;
 }
 
 .clients__row {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 50% 50%;
+  column-gap: 30px;
 }
 
 .scroll {
@@ -275,21 +288,21 @@ a {
   right: 50%;
   transform: translate(50%, 50%);
   content: "";
-  width: 220px;
-  height: 8px;
+  width: 13.75rem;
+  height: 0.5rem;
   border-radius: 5px;
   background-color: var(--primary-color);
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 3.2rem;
   background-color: var(--primary-color);
   color: var(--gray-color);
 }
 
 .footer__intro {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 3.1rem;
+  margin-bottom: 2.5rem;
   font-size: 26px;
 }
 
@@ -302,12 +315,12 @@ footer {
 
 .contact__form {
   position: relative;
-  margin-bottom: 75px;
+  margin-bottom: 4.5rem;
 }
 
 .contact__form p {
   font-family: "Grilroy-Semibold";
-  font-size: 45px;
+  font-size: 2.8rem;
 }
 
 .contact__form::before {
@@ -317,17 +330,18 @@ footer {
   transform: translate(50%, 50%);
   content: "";
   background-color: var(--accent-color);
-  width: 250px;
+  width: 15.5rem;
   height: 3px;
   z-index: 0;
 }
 
 .our__location {
   display: flex;
-  padding: 75px 0;
-  width: 60%;
+  padding: 4.6rem 0;
+  width: 100%;
   background-image: url(images/footer-worldmap.png);
   background-position: center;
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
 }
@@ -339,7 +353,7 @@ footer {
   width: fit-content;
   margin: auto;
   font-size: 1.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 1.5rem;
   padding: 10px;
   border-radius: 5px;
   background-color: var(--gray-color);
@@ -362,30 +376,53 @@ footer {
 }
 
 .white__box p {
-  margin-left: 10px;
+  margin-left: 0.65rem;
 }
 
 .point {
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   background: var(--accent-color);
   border-radius: 50%;
-  margin-bottom: 155px;
+  margin-bottom: 9.5rem;
   border: 3px #ac17174a solid;
 }
 
 .social__media {
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+
+.social-media-icons__grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto;
+  column-gap: 0.75rem;
 }
 
 .social__media p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /* Reusable classes */
 
 .text-gray {
   color: var(--gray-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-gray {
+  background-color: var(--gray-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
 }
 
 .font-butlerLight {
@@ -397,13 +434,13 @@ footer {
 }
 
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .down-line {
   border-bottom: 1px solid var(--gray-color);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.65rem;
 }
 
 .opacity-50 {
@@ -412,4 +449,7 @@ footer {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
 }
