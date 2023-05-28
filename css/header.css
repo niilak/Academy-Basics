@@ -1,0 +1,82 @@
+.header {
+  margin-top: 3.4rem;
+  margin-bottom: 9.5rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gilroy-Medium", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.nav__bar {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.nav__links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 1;
+}
+
+.nav__link {
+  color: var(--primary-color);
+  padding: 0 5px 15px 5px;
+}
+
+.nav__link:hover {
+  /*ovo bi trebalo da  je modifier, ali nisam sigurna da li je potrebno imenovati i praviti novu klasu*/
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 12px;
+}
+
+.nav-lng__btn {
+  color: var(--primary-color);
+  width: 45px;
+  height: 38px;
+  text-align: center;
+  margin-left: 8rem;
+  border: 1px solid var(--primary-color);
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-lng__btn {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav__link {
+    justify-content: space-between;
+  }
+
+  .nav-lng__btn {
+    margin-left: 4rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav__bar {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}

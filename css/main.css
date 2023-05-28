@@ -1,130 +1,6 @@
-:root {
-  --primary-color: #283e51;
-  --accent-color: #17ac9d;
-  --gray-color: #f5f5f5;
-  font-size: 16px;
-  color: var(--primary-color);
-}
-
-@font-face {
-  font-family: "Rockness-Regular";
-  src: url("fonts/Rockness.woff");
-}
-
-@font-face {
-  font-family: "Gilroy-Bold";
-  src: url("fonts/Gilroy-Bold.woff");
-}
-
-@font-face {
-  font-family: "Gilroy-Light";
-  src: url("fonts/Gilroy-Light.woff");
-}
-
-@font-face {
-  font-family: "Gilroy-Medium";
-  src: url("fonts/Gilroy-Medium.woff");
-}
-
-@font-face {
-  font-family: "Butler-Light";
-  src: url("fonts/Butler_Light.woff");
-}
-
-@font-face {
-  font-family: "Grilroy-Semibold";
-  src: url("fonts/Gilroy-Semibold.woff");
-}
-
-* {
-  margin: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: "Gilroy-Light";
-  color: var(--primary-color);
-}
-
-body {
-  margin: 0;
-  width: 100%;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
 .container {
   margin-left: 9.3rem;
   margin-right: 9.3rem;
-}
-
-.header {
-  /* da li za margine ove da pravim container koji cu da dodajem ili\?? */
-  margin-top: 3.4rem;
-  margin-bottom: 9.5rem;
-}
-
-.logo {
-  width: 2rem;
-  height: 2rem;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Gilroy-Medium", sans-serif;
-  color: var(--primary-color);
-  font-size: 1.25rem;
-}
-
-.nav__bar {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.burger-menu {
-  display: none;
-}
-
-.nav__links {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  opacity: 1;
-}
-
-.nav__link {
-  color: var(--primary-color);
-  padding: 0 5px 15px 5px;
-}
-
-.nav__link:hover {
-  /*ovo bi trebalo da  je modifier, ali nisam sigurna da li je potrebno imenovati i praviti novu klasu*/
-  border-bottom: 3px solid var(--primary-color);
-  padding-bottom: 12px;
-}
-
-.nav-lng__btn {
-  color: var(--primary-color);
-  width: 45px;
-  height: 38px;
-  text-align: center;
-  margin-left: 8rem;
-  border: 1px solid var(--primary-color);
 }
 
 main {
@@ -143,7 +19,7 @@ main {
   z-index: -1;
   top: 12rem;
   left: -19rem;
-  content: url(images/team_shape_one.png);
+  content: url(../images/team_shape_one.png);
 }
 
 .hero__header1 {
@@ -180,7 +56,7 @@ main {
 
 .box::after {
   position: absolute;
-  content: url(images/triangle-shape.png);
+  content: url(../images/triangle-shape.png);
   z-index: -1;
   top: 28rem;
   right: -29rem;
@@ -234,7 +110,6 @@ main {
 .banner__container {
   padding-top: 6.25rem;
   padding-bottom: 5rem;
-  /* padding: 6.25rem 0 5rem 0; */
   width: 33.33%;
   text-align: center;
 }
@@ -256,9 +131,6 @@ main {
   font-size: 1.25rem;
 }
 
-/* .clients {
-} */
-
 .clients__header {
   font-weight: normal;
   font-size: 4.5rem;
@@ -270,6 +142,7 @@ main {
 }
 
 .clients__row {
+  /* nije full prilagodjen mobile verziji, tj ima slike idu preko html jer bi trebalo da ide scroll-X */
   display: grid;
   justify-content: center;
   grid-template-columns: auto auto auto auto auto;
@@ -296,170 +169,6 @@ main {
   background-color: var(--primary-color);
 }
 
-footer {
-  margin-top: 3.2rem;
-  background-color: var(--primary-color);
-  color: var(--gray-color);
-}
-
-.footer__intro {
-  margin-top: 3.1rem;
-  margin-bottom: 2.5rem;
-  font-size: 26px;
-}
-
-.footer__div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact__form {
-  position: relative;
-  margin-bottom: 4.5rem;
-}
-
-.contact__form p {
-  position: relative;
-  z-index: 3;
-  font-family: "Grilroy-Semibold";
-  font-size: 2.8rem;
-}
-
-.contact__form::before {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  content: "";
-  background-color: var(--accent-color);
-  width: 15.5rem;
-  height: 3px;
-  z-index: 0;
-}
-.contact__form::after {
-  position: absolute;
-  content: url(images/arrow.svg);
-  top: 11.5px;
-  right: -46px;
-}
-
-.our__location {
-  display: flex;
-  padding: 4.6rem 0;
-  width: 100%;
-  background-image: url(images/footer-worldmap.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  flex-direction: column;
-  align-items: center;
-}
-
-.white__box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: var(--gray-color);
-  color: var(--primary-color);
-}
-
-.white__box::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  transform: translateX(50%);
-  right: 50%;
-  width: 0;
-  height: 0;
-  border: 15px solid;
-  border-top-color: var(--gray-color);
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-}
-
-.white__box p {
-  margin-left: 0.65rem;
-}
-
-.point {
-  width: 1rem;
-  height: 1rem;
-  background: var(--accent-color);
-  border-radius: 50%;
-  margin-bottom: 9.5rem;
-  border: 3px #ac17174a solid;
-}
-
-.social__media {
-  margin-bottom: 6.25rem;
-}
-
-.social-media-icons__grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-template-rows: auto;
-  column-gap: 0.75rem;
-}
-
-.social__media p {
-  margin-bottom: 1.25rem;
-}
-
-/* Reusable classes */
-
-.text-gray {
-  color: var(--gray-color);
-}
-
-.text-accent {
-  color: var(--accent-color);
-}
-
-.bg-gray {
-  background-color: var(--gray-color);
-}
-
-.bg-accent {
-  background-color: var(--accent-color);
-}
-
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.font-butlerLight {
-  font-family: "Butler-Light";
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mb-20 {
-  margin-bottom: 1.25rem;
-}
-
-.down-line {
-  border-bottom: 1px solid var(--gray-color);
-  padding-bottom: 0.65rem;
-  margin-bottom: 0.65rem;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-80 {
-  opacity: 0.8;
-}
-
 @media only screen and (max-width: 1400px) {
   .container {
     margin-left: 5rem;
@@ -468,10 +177,6 @@ footer {
 
   .hero__section {
     padding: 0 10rem;
-  }
-
-  .nav-lng__btn {
-    margin-left: 5rem;
   }
 
   .box {
@@ -505,13 +210,6 @@ footer {
     margin-left: 4.5rem;
     margin-right: 4.5rem;
   }
-  .nav__link {
-    justify-content: space-between;
-  }
-
-  .nav-lng__btn {
-    margin-left: 4rem;
-  }
 
   .box {
     width: 900px;
@@ -543,10 +241,6 @@ footer {
     padding-top: 4.25rem;
     padding-bottom: 4rem;
   }
-
-  footer {
-    font-size: 16px;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -561,14 +255,6 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
-  .nav__bar {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
   .box__img > img {
     width: 92%;
   }
@@ -619,11 +305,12 @@ footer {
   }
 
   .hero__section {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   .hero__header2 {
     margin: 0;
+    line-height: 1;
   }
 
   .box {
@@ -668,13 +355,8 @@ footer {
     margin-right: 1.5rem;
   }
 
-  .header {
-    margin-top: 1rem;
-    margin-bottom: 12rem;
-  }
-
   .hero__section {
-    padding: 0 3rem;
+    padding: 0 1.3rem;
   }
 
   .hero__header2 {
@@ -684,6 +366,7 @@ footer {
   .box {
     width: 97%;
     padding: 3rem 2.3rem 10rem 2.3rem;
+    border-radius: 10px;
   }
 
   .banner {
@@ -692,6 +375,16 @@ footer {
   }
 
   .banner__container {
+    width: 100%;
+  }
+
+  .info {
+    grid-template-columns: 80%;
+    grid-template-rows: auto auto auto;
+    row-gap: 1rem;
+  }
+
+  .info__box {
     width: 100%;
   }
 
@@ -704,9 +397,47 @@ footer {
   }
 
   .clients__row > img {
-    width: 7.7rem;
+    width: 6.7rem;
   }
 }
 
-@media only screen and (mix-width: 320px) {
+@media only screen and (max-width: 425px) {
+  .container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__section {
+    padding: 0;
+  }
+
+  .hero__header1 {
+    font-size: 5.5rem;
+    margin-top: 6rem;
+  }
+
+  .hero__header2 {
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .clients {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .clients__row > img {
+    width: 5.5rem;
+  }
+
+  .box {
+    width: 100%;
+    padding: 1rem 1.5rem 9rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  :root {
+    font-size: 12px;
+  }
 }
