@@ -104,3 +104,18 @@
 
 @media only screen and (max-width: 1024px) {
 }
+@media only screen and (max-width: 1200px) {
+  .blog__post {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 586px) {
+  .post__info {
+    width: 90%;
+  }
+
+  .post__header {
+    font-size: 2rem;
+  }
+}
