@@ -140,6 +140,9 @@ a {
 }
 
 @media only screen and (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
   .container {
     margin-left: 4.5rem;
     margin-right: 4.5rem;
@@ -154,6 +157,10 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+
   .container {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -171,5 +178,11 @@ a {
   .container {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  :root {
+    font-size: 12px;
   }
 }
