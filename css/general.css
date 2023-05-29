@@ -2,6 +2,8 @@
   --primary-color: #283e51;
   --accent-color: #17ac9d;
   --gray-color: #f5f5f5;
+  --gray-bg: #e6e6e6;
+  --white: #ffffff;
   font-size: 16px;
   color: var(--primary-color);
 }
@@ -14,6 +16,11 @@
 @font-face {
   font-family: "Gilroy-Bold";
   src: url("../fonts/Gilroy-Bold.woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Extrabold";
+  src: url("../fonts/Gilroy-Extrabold.woff");
 }
 
 @font-face {
@@ -102,6 +109,10 @@ a {
   padding-left: 10px;
 }
 
+.h-6 {
+  height: 6.25rem;
+}
+
 .down-line {
   border-bottom: 1px solid var(--gray-color);
   padding-bottom: 0.65rem;
@@ -114,4 +125,51 @@ a {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.container {
+  margin-left: 9.3rem;
+  margin-right: 9.3rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }

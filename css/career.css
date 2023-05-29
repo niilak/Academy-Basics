@@ -1,0 +1,229 @@
+body {
+  background-color: var(--accent-color);
+}
+
+.header {
+  margin-top: 3.4rem;
+  margin-bottom: 9.5rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gilroy-Medium", sans-serif;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.nav__bar {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.nav__links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 1;
+}
+
+.nav__link {
+  color: var(--white);
+  padding: 0 5px 15px 5px;
+}
+
+.nav__link:hover {
+  border-bottom: 3px solid var(--white);
+  padding-bottom: 12px;
+}
+
+.nav-lng__btn {
+  color: var(--white);
+  width: 45px;
+  height: 38px;
+  text-align: center;
+  margin-left: 8rem;
+  border: 1px solid var(--white);
+}
+
+main {
+  color: var(--white);
+  margin-bottom: 10rem;
+}
+
+.contact__intro {
+  position: relative;
+}
+
+.contact__intro::after {
+  position: absolute;
+  content: url("../images/cone.png");
+}
+
+.contact__intro::before {
+  position: absolute;
+  content: url("../images/cube.png");
+  top: -4rem;
+  left: -7rem;
+}
+
+.header-1 {
+  font-size: 10rem;
+  font-family: "Rockness-Regular";
+  font-weight: normal;
+  text-align: center;
+}
+
+.header-2 {
+  font-size: 2.6rem;
+  font-family: "Gilroy-Light";
+  font-weight: normal;
+  text-align: center;
+}
+
+.map > img {
+  height: 100%;
+}
+
+.meet {
+  padding: 17%;
+  background-color: var(--gray-color);
+  color: var(--primary-color);
+}
+
+.meet > h3,
+.contact > h3 {
+  font-family: "Butler-Light";
+  font-size: 4rem;
+  margin-bottom: 8rem;
+}
+
+.meet > p {
+  font-size: 1.2rem;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.social_media__icon {
+  margin-top: 7rem;
+}
+
+.contact {
+  /* padding: 0 3rem; */
+  height: 100%;
+  background-color: var(--gray-bg);
+  margin-bottom: 1rem;
+}
+
+.contact__footer {
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  width: 100%;
+  height: 40rem;
+}
+
+.contact__footer::before {
+  position: absolute;
+  content: url(../images/donut.png);
+  right: -7rem;
+  top: -16rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  width: 75%;
+}
+
+.input__area {
+  width: 100%;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--accent-color);
+  font-family: "Gilroy-Light";
+  font-size: 15px;
+}
+
+.btn__group {
+  display: flex;
+  align-items: center;
+}
+
+.btn__group > span {
+  margin-left: 1.6rem;
+  font-family: "Gilroy-Bold";
+
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  /* margin-right: s.5rem; */
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-lng__btn {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav__link {
+    justify-content: space-between;
+  }
+
+  .nav-lng__btn {
+    margin-left: 4rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    margin-top: 1.4rem;
+  }
+
+  .nav__bar {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    margin-top: 1rem;
+  }
+}

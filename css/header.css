@@ -72,11 +72,21 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .header {
+    margin-top: 1.4rem;
+  }
+
   .nav__bar {
     display: none;
   }
 
   .burger-menu {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    margin-top: 1rem;
   }
 }

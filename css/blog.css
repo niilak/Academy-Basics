@@ -1,0 +1,106 @@
+.blog__header {
+  font-size: 4.5rem;
+  font-family: "Butler-Light";
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 3.3rem;
+}
+
+.blog__posts {
+  position: relative;
+}
+
+.blog__posts::after {
+  position: absolute;
+  content: url("../images/team_shape_two.png");
+  z-index: -1;
+  top: 99rem;
+  left: -22rem;
+}
+
+.blog__posts::before {
+  position: absolute;
+  content: url("../images/cube.png");
+  z-index: -1;
+  top: 148rem;
+  right: -29rem;
+}
+
+.blog__post {
+  position: relative;
+  /* background-image: url("../images/blogpost1.jpg"); */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10.5rem;
+  width: 67.5rem;
+  height: 30rem;
+}
+
+.bg-1 {
+  background-image: url("../images/blogpost1.jpg");
+}
+.bg-2 {
+  background-image: url("../images/blogpost2.jpg");
+}
+
+.bg-3 {
+  background-image: url("../images/blogpost3.jpg");
+}
+
+.bg-4 {
+  background-image: url("../images/blogpost4.jpg");
+}
+
+.bg-5 {
+  background-image: url("../images/blogpost5.jpg");
+}
+
+.bg-1 ::after {
+  position: absolute;
+  content: url("../images/triangle-shape.png");
+  z-index: -1;
+  bottom: 1rem;
+  left: 63rem;
+  opacity: 0.3;
+}
+
+.post__info {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -35px;
+  background-color: var(--gray-color);
+  opacity: 0.9;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px #0000002e;
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;
+  width: 37.5rem;
+}
+
+.post__header {
+  font-size: 2.25rem;
+  font-family: "Gilroy-Extrabold";
+  margin-bottom: 1rem;
+}
+
+.post__date {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.publisher {
+  display: flex;
+  align-items: center;
+}
+
+.publisher__info {
+  margin-left: 1.2rem;
+}
+
+.publisher__info > h3 {
+  font-family: "Gilroy-Extrabold";
+}
+
+@media only screen and (max-width: 1024px) {
+}
